@@ -51,6 +51,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "BCWeb";
             this.Text = "BusinessCheck Rapport";
+            this.TopMost = true;
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.BCWeb_FormClosing);
             this.ResumeLayout(false);
 

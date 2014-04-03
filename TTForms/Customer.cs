@@ -134,7 +134,7 @@ namespace TTForms
                 sb.Append("&OrganizationNumber=" + mGarpCustomerOrgNr);
 
                 BCWeb web = new BCWeb(sb.ToString());
-                web.ShowDialog();
+                web.Show();
             }
         }
 
