@@ -14,17 +14,19 @@ namespace TTForms
         private bool disposed;
         private Garp.Application app;
         private Garp.Dataset dsKA;
+        private Garp.ITable mTA;
+        private Garp.ITabField mTA_TX1;
         private Garp.IComponents oComp;
         private Garp.IComponent btnBCGetRatingAndLimit, btnBCSite;
-        private string mBCCustomer = "tt", mBCUserName = "integration", mBCPassword = "ttbc0701", mBCLanguage = "sv", mBCPackage = "RatingLimit", mBCReportType = "CompanyReport", mGarpCustomerOrgNr;
+        private string mBCCustomer = "regn", mBCUserName = "integration", mBCPassword = "ttbc0701", mBCLanguage = "sv", mBCPackage = "RatingLimit", mBCReportType = "CompanyReport", mGarpCustomerOrgNr;
 
         public Customer()
         {
             try
             {
                 mBCCustomer = ConfigurationManager.AppSettings["CustomerLoginName"].ToString();
-                mBCUserName = ConfigurationManager.AppSettings["UserLoginName"].ToString();
-                mBCPassword = ConfigurationManager.AppSettings["Password"].ToString();
+                //mBCUserName = ConfigurationManager.AppSettings["UserLoginName"].ToString();
+                //mBCPassword = ConfigurationManager.AppSettings["Password"].ToString();
                 mBCLanguage = ConfigurationManager.AppSettings["Language"].ToString();
                 mBCPackage = ConfigurationManager.AppSettings["PackageName"].ToString();
                 mBCReportType = ConfigurationManager.AppSettings["ReportType"].ToString();
@@ -34,20 +36,36 @@ namespace TTForms
             try
             {
                 app = new Garp.Application();
+
+                mTA = app.Tables.Item("TA");
+                mTA_TX1 = mTA.Fields.Item("TX1");
+
+                if (mTA.Find("W100FU" + app.User.Trim()))
+                {
+                    if (noNULL(mTA_TX1.Value).Contains(";"))
+                    {
+                        string[] s = mTA_TX1.Value.Split(';');
+                        mBCUserName = s[0];
+                        mBCPassword = s[1];
+                    }
+                }
+
                 oComp = app.Components;
                 dsKA = app.Datasets.Item("McDataSet1");
                 oComp.BaseComponent = "Panel1";
-                createButton();
 
-                oComp.Item("McText1").Width = oComp.Item("McText1").Width + 5;
+                if (!string.IsNullOrEmpty(mBCUserName))
+                {
+                    createButton();
 
-                dsKA.BeforePost += new Garp.IDatasetEvents_BeforePostEventHandler(dsKA_BeforePost);
-                dsKA.AfterScroll += new Garp.IDatasetEvents_AfterScrollEventHandler(dsKA_AfterScroll);
+                    oComp.Item("McText1").Width = oComp.Item("McText1").Width + 5;
+                    dsKA.BeforePost += new Garp.IDatasetEvents_BeforePostEventHandler(dsKA_BeforePost);
+                    dsKA.AfterScroll += new Garp.IDatasetEvents_AfterScrollEventHandler(dsKA_AfterScroll);
+                    app.ButtonClick += new Garp.IGarpApplicationEvents_ButtonClickEventHandler(app_ButtonClick);
+                }
 
-                app.ButtonClick += new Garp.IGarpApplicationEvents_ButtonClickEventHandler(app_ButtonClick);
+                //                ctx = new DataImport2SoapClient("DataImport2Soap");
 
-//                ctx = new DataImport2SoapClient("DataImport2Soap");
-               
             }
             catch (Exception ex)
             {
@@ -171,6 +189,19 @@ namespace TTForms
         {
             if (!this.disposed)
             {
+            }
+        }
+
+        public static string noNULL(object o)
+        {
+            if (o == null)
+                return "";
+            else
+            {
+                if (o.GetType().Equals(TypeCode.String))
+                    return (string)o;
+                else
+                    return o.ToString();
             }
         }
 
