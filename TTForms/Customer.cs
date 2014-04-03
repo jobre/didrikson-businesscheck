@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using TTForms.BC;
+//using TTForms.BC;
 using System.Text.RegularExpressions;
 using System.Configuration;
 
@@ -10,7 +10,7 @@ namespace TTForms
 {
     public class Customer : IDisposable
     {
-        BC.DataImport2SoapClient ctx;
+//        BC.DataImport2SoapClient ctx;
         private bool disposed;
         private Garp.Application app;
         private Garp.Dataset dsKA;
@@ -46,7 +46,7 @@ namespace TTForms
 
                 app.ButtonClick += new Garp.IGarpApplicationEvents_ButtonClickEventHandler(app_ButtonClick);
 
-                ctx = new DataImport2SoapClient("DataImport2Soap");
+//                ctx = new DataImport2SoapClient("DataImport2Soap");
                
             }
             catch (Exception ex)
@@ -65,56 +65,56 @@ namespace TTForms
 
         void app_ButtonClick()
         {
-            BC.DataImport2Result result;
+//            BC.DataImport2Result result;
             mGarpCustomerOrgNr = oComp.Item("meOrganizationNr").Text;
             double limit = 0;
 
             if (oComp.CurrentField.Equals("btnBCGetRatingAndLimit"))
             {
-                if (!checkOrgNr(mGarpCustomerOrgNr))
-                {
-                    System.Windows.Forms.MessageBox.Show("Kunden har inget giltigt organisationsnummer angivet");
-                    return;
-                }
+                //if (!checkOrgNr(mGarpCustomerOrgNr))
+                //{
+                //    System.Windows.Forms.MessageBox.Show("Kunden har inget giltigt organisationsnummer angivet");
+                //    return;
+                //}
 
-                result = ctx.DataImport2Company(mBCCustomer, mBCUserName, mBCPassword, mBCLanguage, mBCPackage, mGarpCustomerOrgNr);
+                //result = ctx.DataImport2Company(mBCCustomer, mBCUserName, mBCPassword, mBCLanguage, mBCPackage, mGarpCustomerOrgNr);
 
-                if (result.Blocks == null)
-                {
-                    System.Windows.Forms.MessageBox.Show("Kund med angivet organisationsnummer hittades ej!");
-                    return;
-                }
+                //if (result.Blocks == null)
+                //{
+                //    System.Windows.Forms.MessageBox.Show("Kund med angivet organisationsnummer hittades ej!");
+                //    return;
+                //}
 
-                foreach (BC.Block b in result.Blocks)
-                {
-                    foreach (BC.Field f in b.Fields)
-                    {
-                        if (f.Code.Equals("Limit"))
-                        {
+                //foreach (BC.Block b in result.Blocks)
+                //{
+                //    foreach (BC.Field f in b.Fields)
+                //    {
+                //        if (f.Code.Equals("Limit"))
+                //        {
                             
-                            try
-                            {
-                                if(double.TryParse(f.Value.Replace(",", ""), out limit))
-                                {
-                                    if (limit > 1000)
-                                        oComp.Item("McEdit43").Text = (limit / 1000).ToString(); // Kreditlimit
-                                    else
-                                        oComp.Item("McEdit43").Text = "1";//limit.ToString(); // Kreditlimit
-                                }
-                            }
-                            catch { }
-                        }
-                        else if (f.Code.Equals("Rating"))
-                        {
-                            oComp.Item("McText1").Text = f.Value; //TX6
-                            oComp.Item("McEdit28").Text = DateTime.Now.ToString("yyMMdd");
-                            oComp.Item("McText4").Text = DateTime.Now.ToString("yyMMdd");  
-                            //oComp.Item("McEdit20").Text = f.Value; //TX6
-                        }
-                    }
-                }
+                //            try
+                //            {
+                //                if(double.TryParse(f.Value.Replace(",", ""), out limit))
+                //                {
+                //                    if (limit > 1000)
+                //                        oComp.Item("McEdit43").Text = (limit / 1000).ToString(); // Kreditlimit
+                //                    else
+                //                        oComp.Item("McEdit43").Text = "1";//limit.ToString(); // Kreditlimit
+                //                }
+                //            }
+                //            catch { }
+                //        }
+                //        else if (f.Code.Equals("Rating"))
+                //        {
+                //            oComp.Item("McText1").Text = f.Value; //TX6
+                //            oComp.Item("McEdit28").Text = DateTime.Now.ToString("yyMMdd");
+                //            oComp.Item("McText4").Text = DateTime.Now.ToString("yyMMdd");  
+                //            //oComp.Item("McEdit20").Text = f.Value; //TX6
+                //        }
+                //    }
+                //}
 
-                System.Windows.Forms.MessageBox.Show("Uppdatering av kundens kreditlimit & rating är klar", "Uppdatering klar", System.Windows.Forms.MessageBoxButtons.OK, System.Windows.Forms.MessageBoxIcon.Information);
+                //System.Windows.Forms.MessageBox.Show("Uppdatering av kundens kreditlimit & rating är klar", "Uppdatering klar", System.Windows.Forms.MessageBoxButtons.OK, System.Windows.Forms.MessageBoxIcon.Information);
             }
             else if (oComp.CurrentField.Equals("btnBCSite"))
             {
@@ -152,10 +152,10 @@ namespace TTForms
                 //btnBCGetRatingAndLimit.Visible = true;
 
                 btnBCSite = oComp.AddButton("btnBCSite");
-                btnBCSite.Top = btnBCGetRatingAndLimit.Top;
-                btnBCSite.Height = btnBCGetRatingAndLimit.Height;
+                btnBCSite.Top = oComp.Item("hitSpeedButton").Top;
+                btnBCSite.Height = oComp.Item("hitSpeedButton").Height;
                 btnBCSite.Width = 60;
-                btnBCSite.Left = btnBCGetRatingAndLimit.Left + btnBCGetRatingAndLimit.Width + 5;
+                btnBCSite.Left = oComp.Item("hitSpeedButton").Left + oComp.Item("hitSpeedButton").Width + 5;
                 btnBCSite.Text = "BC";
                 btnBCSite.TabStop = false;
                 btnBCSite.Visible = true;

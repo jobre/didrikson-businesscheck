@@ -70,11 +70,6 @@
     <Compile Include="ExtClasses\Logger.cs" />
     <Compile Include="Order.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Service References\BC\Reference.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Service References\" />
@@ -85,29 +80,7 @@
       <SubType>Designer</SubType>
     </None>
     <None Include="forms.pfx" />
-    <None Include="Service References\BC\dataimport2.wsdl" />
-    <None Include="Service References\BC\TTForms.BC.DataImport2Result.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
     <None Include="tt.snk" />
-  </ItemGroup>
-  <ItemGroup>
-    <WCFMetadataStorage Include="Service References\BC\" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Service References\BC\dataimport2.disco" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Service References\BC\configuration91.svcinfo" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Service References\BC\configuration.svcinfo" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Service References\BC\Reference.svcmap">
-      <Generator>WCF Proxy Generator</Generator>
-      <LastGenOutput>Reference.cs</LastGenOutput>
-    </None>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="BCWeb.resx">
