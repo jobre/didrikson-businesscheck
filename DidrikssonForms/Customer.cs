@@ -6,7 +6,7 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Configuration;
 
-namespace TTForms
+namespace DidriksonsForms
 {
     public class Customer : IDisposable
     {

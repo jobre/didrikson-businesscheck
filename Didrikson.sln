@@ -1,0 +1,83 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.30723.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestBusinessCheck", "TestBusinessCheck\TestBusinessCheck.csproj", "{38A175EF-FE90-4537-9DBE-DBB60B9A99A5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FixOrder", "FixOrder\FixOrder.csproj", "{80D0D3C3-04D5-4FDF-BBDC-6EB16118181F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{8EEC805E-358D-463E-953B-E66AC5C7C46D}"
+	ProjectSection(SolutionItems) = preProject
+		..\..\..\Program Files (x86)\Microcraft\Garp\Client\Garp.exe = ..\..\..\Program Files (x86)\Microcraft\Garp\Client\Garp.exe
+	EndProjectSection
+EndProject
+Project("{911E67C6-3D85-4FCE-B560-20A9C3E3FF48}") = "Garp", "..\..\..\Program Files (x86)\Microcraft\Garp\Client\Garp.exe", "{8D61DE23-7BFA-44C0-A7E2-320396335228}"
+	ProjectSection(DebuggerProjectSystem) = preProject
+		PortSupplier = 00000000-0000-0000-0000-000000000000
+		Executable = C:\Program Files (x86)\Microcraft\Garp\Client\Garp.exe
+		RemoteMachine = JOBRE_MBP
+		StartingDirectory = C:\Program Files (x86)\Microcraft\Garp\Client
+		Arguments = /k Ebeco
+		Environment = msbuildloadmicrosofttargetsreadonly=true	vslang=1033	processor_identifier=Intel64 Family 6 Model 58 Stepping 9, GenuineIntel	pkgdefapplicationconfigfile=C:\Users\Joakim\AppData\Local\Microsoft\VisualStudio\12.0\devenv.exe.config	localappdata=C:\Users\Joakim\AppData\Local	userdomain_roamingprofile=Jobre_MBP	windir=C:\WINDOWS	commonprogramfiles(x86)=C:\Program Files (x86)\Common Files	homedrive=C:	processor_architew6432=AMD64	comspec=C:\WINDOWS\system32\cmd.exe	temp=C:\Users\Joakim\AppData\Local\Temp	psmodulepath=C:\WINDOWS\system32\WindowsPowerShell\v1.0\Modules\;C:\Program Files (x86)\Microsoft SQL Server\110\Tools\PowerShell\Modules\	computername=JOBRE_MBP	commonprogramfiles=C:\Program Files (x86)\Common Files	path=C:\Program Files (x86)\Microsoft Visual Studio 12.0\Common7\IDE\CommonExtensions\Microsoft\TeamFoundation\Team Explorer\NativeBinaries/x86;C:\Program Files (x86)\Parallels\Parallels Tools\Applications;C:\Program Files\Common Files\Microsoft Shared\Microsoft Online Services;C:\Program Files (x86)\Common Files\Microsoft Shared\Microsoft Online Services;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Microsoft ASP.NET\ASP.NET Web Pages\v1.0\;C:\Program Files\Microsoft SQL Server\110\Tools\Binn\;C:\Program Files (x86)\Java\jre7\bin;C:\Program Files (x86)\Microsoft SQL Server\110\Tools\Binn\ManagementStudio\;C:\Program Files (x86)\Microsoft SQL Server\110\Tools\Binn\;C:\Program Files (x86)\Microsoft SQL Server\110\DTS\Binn\;c:\Program Files (x86)\Microsoft SQL Server\100\Tools\Binn\;c:\Program Files\Microsoft SQL Server\100\Tools\Binn\;c:\Program Files\Microsoft SQL Server\100\DTS\Binn\;C:\Program Files (x86)\Git\cmd;C:\Program Files\TortoiseHg\;C:\Program Files (x86)\Windows Kits\8.1\Windows Performance Toolkit\;C:\Program Files\Microsoft\Web Platform Installer\;C:\Program Files (x86)\Microsoft SDKs\TypeScript\1.0\	tmp=C:\Users\Joakim\AppData\Local\Temp	homepath=\Users\Joakim	processor_revision=3a09	programfiles(x86)=C:\Program Files (x86)	allusersprofile=C:\ProgramData	vs120comntools=C:\Program Files (x86)\Microsoft Visual Studio 12.0\Common7\Tools\	fp_no_host_check=NO	processor_architecture=x86	processor_level=6	vs110comntools=C:\Program Files (x86)\Microsoft Visual Studio 11.0\Common7\Tools\	os=Windows_NT	public=C:\Users\Public	appdata=C:\Users\Joakim\AppData\Roaming	logonserver=\\JOBRE_MBP	pathext=.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC	visualstudioversion=12.0	visualstudiodir=\\psf\Home\Documents\Visual Studio 2013	systemroot=C:\WINDOWS	programfiles=C:\Program Files (x86)	commonprogramw6432=C:\Program Files\Common Files	visualstudioedition=Microsoft Visual Studio Professional 2013	programdata=C:\ProgramData	userdomain=Jobre_MBP	number_of_processors=1	programw6432=C:\Program Files	userprofile=C:\Users\Joakim	systemdrive=C:	username=jobre	
+		LaunchingEngine = 5fff7536-0c87-462d-8fd2-7971d948e6dc
+		UseLegacyDebugEngines = No
+		LaunchSQLEngine = No
+		AttachLaunchAction = No
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DidriksonForms", "DidrikssonForms\DidriksonForms.csproj", "{A1850026-6880-4DC4-9871-0273C8357D9D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|Mixed Platforms = Debug|Mixed Platforms
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|Mixed Platforms = Release|Mixed Platforms
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{38A175EF-FE90-4537-9DBE-DBB60B9A99A5}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{38A175EF-FE90-4537-9DBE-DBB60B9A99A5}.Debug|Mixed Platforms.ActiveCfg = Debug|x86
+		{38A175EF-FE90-4537-9DBE-DBB60B9A99A5}.Debug|Mixed Platforms.Build.0 = Debug|x86
+		{38A175EF-FE90-4537-9DBE-DBB60B9A99A5}.Debug|x86.ActiveCfg = Debug|x86
+		{38A175EF-FE90-4537-9DBE-DBB60B9A99A5}.Debug|x86.Build.0 = Debug|x86
+		{38A175EF-FE90-4537-9DBE-DBB60B9A99A5}.Release|Any CPU.ActiveCfg = Release|x86
+		{38A175EF-FE90-4537-9DBE-DBB60B9A99A5}.Release|Mixed Platforms.ActiveCfg = Release|x86
+		{38A175EF-FE90-4537-9DBE-DBB60B9A99A5}.Release|Mixed Platforms.Build.0 = Release|x86
+		{38A175EF-FE90-4537-9DBE-DBB60B9A99A5}.Release|x86.ActiveCfg = Release|x86
+		{38A175EF-FE90-4537-9DBE-DBB60B9A99A5}.Release|x86.Build.0 = Release|x86
+		{80D0D3C3-04D5-4FDF-BBDC-6EB16118181F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{80D0D3C3-04D5-4FDF-BBDC-6EB16118181F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{80D0D3C3-04D5-4FDF-BBDC-6EB16118181F}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{80D0D3C3-04D5-4FDF-BBDC-6EB16118181F}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{80D0D3C3-04D5-4FDF-BBDC-6EB16118181F}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{80D0D3C3-04D5-4FDF-BBDC-6EB16118181F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{80D0D3C3-04D5-4FDF-BBDC-6EB16118181F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{80D0D3C3-04D5-4FDF-BBDC-6EB16118181F}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{80D0D3C3-04D5-4FDF-BBDC-6EB16118181F}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{80D0D3C3-04D5-4FDF-BBDC-6EB16118181F}.Release|x86.ActiveCfg = Release|Any CPU
+		{8D61DE23-7BFA-44C0-A7E2-320396335228}.Debug|Any CPU.ActiveCfg = Debug
+		{8D61DE23-7BFA-44C0-A7E2-320396335228}.Debug|Mixed Platforms.ActiveCfg = Debug
+		{8D61DE23-7BFA-44C0-A7E2-320396335228}.Debug|x86.ActiveCfg = Debug
+		{8D61DE23-7BFA-44C0-A7E2-320396335228}.Release|Any CPU.ActiveCfg = Debug
+		{8D61DE23-7BFA-44C0-A7E2-320396335228}.Release|Mixed Platforms.ActiveCfg = Debug
+		{8D61DE23-7BFA-44C0-A7E2-320396335228}.Release|x86.ActiveCfg = Debug
+		{A1850026-6880-4DC4-9871-0273C8357D9D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A1850026-6880-4DC4-9871-0273C8357D9D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A1850026-6880-4DC4-9871-0273C8357D9D}.Debug|Mixed Platforms.ActiveCfg = Debug|x86
+		{A1850026-6880-4DC4-9871-0273C8357D9D}.Debug|Mixed Platforms.Build.0 = Debug|x86
+		{A1850026-6880-4DC4-9871-0273C8357D9D}.Debug|x86.ActiveCfg = Debug|x86
+		{A1850026-6880-4DC4-9871-0273C8357D9D}.Debug|x86.Build.0 = Debug|x86
+		{A1850026-6880-4DC4-9871-0273C8357D9D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A1850026-6880-4DC4-9871-0273C8357D9D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A1850026-6880-4DC4-9871-0273C8357D9D}.Release|Mixed Platforms.ActiveCfg = Release|x86
+		{A1850026-6880-4DC4-9871-0273C8357D9D}.Release|Mixed Platforms.Build.0 = Release|x86
+		{A1850026-6880-4DC4-9871-0273C8357D9D}.Release|x86.ActiveCfg = Release|x86
+		{A1850026-6880-4DC4-9871-0273C8357D9D}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

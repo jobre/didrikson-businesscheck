@@ -1,4 +1,4 @@
-﻿namespace TTForms
+﻿namespace DidriksonsForms
 {
     partial class BCWeb
     {

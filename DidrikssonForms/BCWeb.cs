@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
-namespace TTForms
+namespace DidriksonsForms
 {
     public partial class BCWeb : Form
     {
